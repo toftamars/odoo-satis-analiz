@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_sales_analysis_root"
+              name="Sales Analysis"
+              sequence="10"/>
+
+    <menuitem id="menu_sales_analysis"
+              name="Sales Analysis"
+              parent="menu_sales_analysis_root"
+              action="action_sales_analysis"
+              sequence="10"/>
+</odoo> 

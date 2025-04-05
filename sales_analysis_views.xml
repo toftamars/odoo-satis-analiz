@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_sales_analysis_tree" model="ir.ui.view">
+        <field name="name">sales.analysis.tree</field>
+        <field name="model">sales.analysis</field>
+        <field name="arch" type="xml">
+            <tree string="Sales Analysis">
+                <field name="name"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="customer_id"/>
+                <field name="product_id"/>
+                <field name="total_sales"/>
+                <field name="average_order_value"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_sales_analysis_form" model="ir.ui.view">
+        <field name="name">sales.analysis.form</field>
+        <field name="model">sales.analysis</field>
+        <field name="arch" type="xml">
+            <form string="Sales Analysis">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                        </group>
+                        <group>
+                            <field name="customer_id"/>
+                            <field name="product_id"/>
+                            <field name="total_sales"/>
+                            <field name="average_order_value"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_sales_analysis" model="ir.actions.act_window">
+        <field name="name">Sales Analysis</field>
+        <field name="res_model">sales.analysis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo> 
